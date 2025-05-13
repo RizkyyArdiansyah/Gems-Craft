@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+@layer utilities {
+    .disable-link {
+        @apply pointer-events-none text-gray-500;
+    }
+
+    /* Tambahkan efek transisi */
+.page-transition {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.page-transition.fade-out {
+    opacity: 0;
+}
+
+.minimal-swal-popup {
+    @apply bg-white rounded-xl p-4 w-[90%] max-w-xs shadow-md;
+}
+
+.minimal-swal-popup .swal2-icon {
+    @apply hidden; /* remove default big icon for ultra-minimalis look */
+}
+
+.minimal-swal-popup .swal2-title {
+    @apply mb-2;
+}
+
+.minimal-swal-popup .swal2-html-container {
+    @apply mb-4;
+}
+
+.minimal-swal-popup .swal2-actions {
+    @apply flex justify-end gap-2;
+}
+}
+
